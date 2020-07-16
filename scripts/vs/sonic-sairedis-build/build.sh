@@ -1,19 +1,20 @@
 #!/bin/bash -ex
 
 # Install HIREDIS
-sudo dpkg -i buildimage/target/debs/stretch/libhiredis*.deb
+sudo apt-get install -y libhiredis0.14 libhiredis-dev
 
 # Install libnl3
-sudo dpkg -i buildimage/target/debs/stretch/libnl-3-200_*.deb
-sudo dpkg -i buildimage/target/debs/stretch/libnl-3-dev_*.deb
-sudo dpkg -i buildimage/target/debs/stretch/libnl-genl-3-200_*.deb
-sudo dpkg -i buildimage/target/debs/stretch/libnl-genl-3-dev_*.deb
-sudo dpkg -i buildimage/target/debs/stretch/libnl-route-3-200_*.deb
-sudo dpkg -i buildimage/target/debs/stretch/libnl-route-3-dev_*.deb
-sudo dpkg -i buildimage/target/debs/stretch/libnl-nf-3-200_*.deb
-sudo dpkg -i buildimage/target/debs/stretch/libnl-nf-3-dev_*.deb
-sudo dpkg -i buildimage/target/debs/stretch/libnl-cli-3-200_*.deb
-sudo dpkg -i buildimage/target/debs/stretch/libnl-cli-3-dev_*.deb
+sudo apt-get install -y \
+         libnl-3-200 \
+         libnl-3-dev \
+         libnl-genl-3-200 \
+         libnl-genl-3-dev \
+         libnl-route-3-200 \
+         libnl-route-3-dev \
+         libnl-nf-3-200 \
+         libnl-nf-3-dev \
+         libnl-cli-3-200 \
+         libnl-cli-3-dev
 
 # Install common library
 sudo dpkg -i common/libswsscommon_*.deb
